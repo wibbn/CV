@@ -1,0 +1,120 @@
+\documentclass[10pt,a4paper,ragged2e,withhyper]{my_cv}
+
+\geometry{left=1.2cm,right=1.2cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+\usepackage{paracol}
+
+\ifxetexorluatex
+%   \setmainfont{Roboto Slab}
+%   \setsansfont{Lato}
+    \renewcommand{\familydefault}{\sfdefault}
+\else
+%   \usepackage[rm]{roboto}
+%   \usepackage[defaultsans]{lato}
+    \RequirePackage[default]{raleway}
+    \renewcommand{\familydefault}{\sfdefault}
+\fi
+
+\definecolor{facebook}{RGB}{66,103,178}
+
+\colorlet{name}{black}
+\colorlet{tagline}{black}
+\colorlet{section}{facebook!60}
+\colorlet{heading}{black}
+\colorlet{subheading}{facebook!90!black}
+\colorlet{props}{black}
+\colorlet{accent}{facebook!80}
+\colorlet{tag}{facebook!15}
+\colorlet{emphasis}{facebook}
+\colorlet{body}{black}
+
+\renewcommand{\namefont}{\Huge\bfseries}
+\renewcommand{\cvsectionfont}{\LARGE\bfseries}
+\renewcommand{\personalinfofont}{\normalsize}
+\renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+\input{components/achievements}
+\input{components/additional}
+\input{components/projects}
+\input{components/education}
+\input{components/work}
+
+\begin{document}
+
+	\name{Ivan Lazunin}
+	\tagline{}
+
+	\personalinfo{
+	  \email{code.wibbn@gmail.com}
+	  \phone{+7 900 475-84-92}
+	  \github{wibbn}
+	  \NewInfoField{telegram}{\faTelegram}[https://t.me/]
+	  \telegram{wibbn}
+	}
+
+	\makecvheader
+
+	\vspace{3mm}
+
+	\columnratio{0.6}
+
+	\begin{paracol}{2}
+	    \cvsection{Experience}
+	    
+	        \YandexInternship{}
+	    
+		\cvsection{Projects}
+		
+            \AssessingHumor{}
+            
+            \medskip
+            \hdashrule[1.0ex][c]{\linewidth}{0.3pt}{0.5ex}
+            
+            \ReflectionSeparation{}
+        
+		\cvsection{Education}
+		
+		    \EduMIREA{}
+		
+	\switchcolumn
+
+		\cvsection{Achievements}
+		
+    		\CaseIn{}
+    		
+            \medskip
+            \hdashrule[1.0ex][c]{\linewidth}{0.3pt}{0.5ex}
+    		
+    		\AIAcademySber{}
+    		
+            \medskip
+            \hdashrule[1.0ex][c]{\linewidth}{0.3pt}{0.5ex}
+    		
+    		\NTI{}
+    		
+            \medskip
+            \hdashrule[1.0ex][c]{\linewidth}{0.3pt}{0.5ex}
+            
+            \RCSC{}
+        
+        \cvsection{Summer Schools}
+        
+            \EduYandexTwentyTwentyOne
+            
+            \medskip
+            \hdashrule[1.0ex][c]{\linewidth}{0.3pt}{0.5ex}
+            
+            \EduYandexTwentyNineteen
+            
+            \medskip
+            \hdashrule[1.0ex][c]{\linewidth}{0.3pt}{0.5ex}
+            
+            \EduMIPT
+            
+        \cvsection{Additional}
+        
+            \addition{}
+
+	\end{paracol}
+
+\end{document}
