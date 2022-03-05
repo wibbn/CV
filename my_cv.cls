@@ -315,7 +315,7 @@
 
 \newcommand*{\education}[4]{
     % \medskip
-    {\Large\headline{#1}{}}
+    {\large\headline{#1}{}}
     \subline{#2}
     \props{#3}{#4}
 }
