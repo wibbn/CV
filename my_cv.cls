@@ -276,6 +276,16 @@
     }
 }
 
+\newcommand*{\propsCompact}[3]{
+    \ifstrequal{#1}{}{}{\small\makebox[0.3\linewidth][l]{\textbf{\color{subheading}#1}}}
+    {
+        \color{props}
+        \ifstrequal{#2}{}{}{\small\makebox[0.3\linewidth][l]{\faMapMarker~#2}}%
+        \ifstrequal{#3}{}{}{{\small\makebox[0.3\linewidth][l]{\faCalendar~#3}}}%
+    }\\
+    \smallskip
+}
+
 \newcommand*{\props}[2]{
     {
         \color{props}
@@ -300,16 +310,15 @@
 \newcommand*{\work}[5]{
     % \medskip
     {\Large\headline{#1}{}}
-    \subline{#2}
-    \props{#3}{#4}
+    % \subline{#2}
+    \propsCompact{#2}{#4}{#3}
     \chips{#5}
 }
 
 \newcommand*{\project}[6]{
     % \medskip
     {\Large\headline{#1}{#5}}
-    \subline{#2}
-    \props{#3}{#4}
+    \propsCompact{#2}{#4}{#3}
     \chips{#6}
 }
 
